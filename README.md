@@ -1,2 +1,2 @@
-# domino
+# Domino
 Juego de dominó
