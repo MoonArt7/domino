@@ -152,6 +152,9 @@ public class FrmLobby extends javax.swing.JFrame {
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
+        FrmPartida frm= new FrmPartida();
+        this.dispose();
+        frm.setVisible(true);
     }//GEN-LAST:event_btnStartActionPerformed
 
     /**
