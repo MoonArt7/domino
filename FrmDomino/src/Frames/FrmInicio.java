@@ -30,7 +30,7 @@ public class FrmInicio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnPlay = new javax.swing.JButton();
         btnSettings = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnAvatar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Domino+");
@@ -48,6 +48,11 @@ public class FrmInicio extends javax.swing.JFrame {
         btnPlay.setText("Play");
         btnPlay.setBorder(null);
         btnPlay.setFocusPainted(false);
+        btnPlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayActionPerformed(evt);
+            }
+        });
 
         btnSettings.setBackground(new java.awt.Color(204, 204, 204));
         btnSettings.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -60,14 +65,14 @@ public class FrmInicio extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(153, 153, 0));
-        jButton1.setText("User");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAvatar.setBackground(new java.awt.Color(255, 255, 204));
+        btnAvatar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnAvatar.setForeground(new java.awt.Color(153, 153, 0));
+        btnAvatar.setText("User");
+        btnAvatar.setBorder(null);
+        btnAvatar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAvatarActionPerformed(evt);
             }
         });
 
@@ -91,7 +96,7 @@ public class FrmInicio extends javax.swing.JFrame {
                         .addGap(0, 186, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         fondoLayout.setVerticalGroup(
@@ -104,7 +109,7 @@ public class FrmInicio extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                .addComponent(btnAvatar, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -132,9 +137,19 @@ public class FrmInicio extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnSettingsActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAvatarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvatarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        FrmModificarAvatar frm = new FrmModificarAvatar();
+        this.dispose();
+        frm.setVisible(true);
+    }//GEN-LAST:event_btnAvatarActionPerformed
+
+    private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
+        // TODO add your handling code here:
+        FrmLobby frm = new FrmLobby();
+        this.dispose();
+        frm.setVisible(true);
+    }//GEN-LAST:event_btnPlayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,10 +187,10 @@ public class FrmInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAvatar;
     private javax.swing.JButton btnPlay;
     private javax.swing.JButton btnSettings;
     private javax.swing.JPanel fondo;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -53,6 +53,11 @@ public class FrmConfiguracionJuego extends javax.swing.JFrame {
         btnEmpezar.setFocusPainted(false);
         btnEmpezar.setFocusable(false);
         btnEmpezar.setOpaque(true);
+        btnEmpezar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmpezarActionPerformed(evt);
+            }
+        });
 
         cantJugadores.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cantJugadores.setModel(new javax.swing.SpinnerNumberModel(2, 2, 4, 1));
@@ -114,6 +119,13 @@ public class FrmConfiguracionJuego extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEmpezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpezarActionPerformed
+        // TODO add your handling code here:
+        FrmInicio frm = new FrmInicio();
+        this.dispose();
+        frm.setVisible(true);
+    }//GEN-LAST:event_btnEmpezarActionPerformed
 
     /**
      * @param args the command line arguments
