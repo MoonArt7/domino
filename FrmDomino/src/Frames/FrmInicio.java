@@ -124,7 +124,12 @@ public class FrmInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettingsActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:+
+        FrmConfiguracionJuego frm = new FrmConfiguracionJuego();
+        this.dispose();
+        frm.setVisible(true);
+        
+        
     }//GEN-LAST:event_btnSettingsActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
